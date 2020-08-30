@@ -41,7 +41,6 @@ page{
   flex-shrink: 0;
 }
 .goods-item .content{
-  height: 200rpx;
   margin-left: 10rpx;
 }
 .goods-item .content .title{
@@ -67,4 +66,10 @@ page{
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+.goods-item .detail{
+  display: flex;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 30rpx;
 }

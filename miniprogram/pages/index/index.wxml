@@ -6,18 +6,15 @@
   </view>
 
   <view class="goods-list">
-    <view class="goods-item">
-      <image src="../../images/goods.jpg" class="img"></image>
+    <view class="goods-item" wx:for="{{dataList}}">
+      <image src="{{item.main_pic}}" class="img"></image>
       <view class="content">
-        <view class="title">小新air14</view>
-        <view class="price">22.2元</view>
-      </view>
-    </view>
-    <view class="goods-item">
-      <image src="../../images/goods.jpg" class="img"></image>
-      <view class="content">
-        <view class="title">小新air14</view>
-        <view class="price">22.2元</view>
+        <view class="title">{{item.title}}</view>
+        <view class="price">{{item.price}}元</view>
+        <view class="detail">
+          <view>淘宝</view>
+          <view>| 8-30</view>
+        </view>
       </view>
     </view>
   </view>
