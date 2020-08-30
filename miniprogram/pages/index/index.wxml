@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search-head">
+    <icon type="search" size="28" class="search-icon"></icon>
+    <navigator class="search-nav" url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">搜索</navigator>
+  </view>
+
+  <view class="goods-list">
+    <view class="goods-item">
+      <image src="../../images/goods.jpg" class="img"></image>
+      <view class="content">
+        <view class="title">小新air14</view>
+        <view class="price">22.2元</view>
+      </view>
+    </view>
+    <view class="goods-item">
+      <image src="../../images/goods.jpg" class="img"></image>
+      <view class="content">
+        <view class="title">小新air14</view>
+        <view class="price">22.2元</view>
+      </view>
+    </view>
+  </view>
+</view>
