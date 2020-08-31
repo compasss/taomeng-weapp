@@ -2,20 +2,27 @@
 <view class="container">
   <view class="search-head">
     <icon type="search" size="28" class="search-icon"></icon>
-    <navigator class="search-nav" url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">搜索</navigator>
+    <input class="search-nav"></input>
+    <!-- <navigator class="search-nav" url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">搜索</navigator> -->
   </view>
 
   <view class="goods-list">
-    <view class="goods-item" wx:for="{{dataList}}">
-      <image src="{{item.main_pic}}" class="img"></image>
-      <view class="content">
-        <view class="title">{{item.title}}</view>
-        <view class="price">{{item.price}}元</view>
-        <view class="detail">
-          <view>淘宝</view>
-          <view>| 8-30</view>
+    <scroll-view
+      scroll-y="true"
+      enable-back-to-top="true"
+      bindscrolltolower="nextPage"
+    >
+      <view class="goods-item" wx:for="{{dataList}}" wx:key="_id" bindtap="showDetail" data-id="{{item._id}}" data-index="{{index}}">
+        <image src="{{item.main_pic}}" class="img"></image>
+        <view class="content">
+          <view class="title">{{item.title}}</view>
+          <view class="price">{{item.price}}元</view>
+          <view class="detail">
+            <view>淘宝</view>
+            <view>| 8-30</view>
+          </view>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </view>
 </view>

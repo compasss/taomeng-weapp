@@ -1,0 +1,12 @@
+<!--miniprogram/pages/goodsDetail/goodsDetail.wxml-->
+<view class="container">
+  <view class="title">{{data.title}}</view>
+  <view class="price">￥{{data.price}}</view>
+  <view class="kouling">
+    <view class="a">平台：淘宝</view>
+    <view class="a">口令：gejigjeijgei</view>
+  </view>
+  <view class="img-container">
+    <image wx:for="{{data.pic_list}}" wx:key="index" src="{{item}}" class="item"></image>
+  </view>
+</view>
