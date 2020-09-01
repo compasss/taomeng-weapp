@@ -2,11 +2,19 @@
 <view class="container">
   <view class="title">{{data.title}}</view>
   <view class="price">￥{{data.price}}</view>
-  <view class="kouling">
+  <!-- <view class="kouling" wx:if="{{data.platform=='taobao'}}">
     <view class="a">平台：淘宝</view>
     <view class="a">口令：gejigjeijgei</view>
   </view>
+  <view class="kouling" wx:else>
+    <view class="a">平台：京东</view>
+    <view class="a">
+      <text>优惠券链接：https://u.jd.com/KwQimg</text>
+      <button size="mini" type="primary" bindtap="jumpMiniProgram">复制</button>
+    </view>
+  </view> -->
   <view class="img-container">
     <image wx:for="{{data.pic_list}}" wx:key="index" src="{{item}}" class="item"></image>
   </view>
+  <button type="primary" class="order-btn" bindtap="newOrder">去下单</button>
 </view>
