@@ -73,3 +73,6 @@ page{
   color: #666;
   margin-top: 30rpx;
 }
+.goods-item .detail .item{
+  margin-right: 20rpx;
+}

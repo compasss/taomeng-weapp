@@ -18,8 +18,9 @@
           <view class="title">{{item.title}}</view>
           <view class="price">{{item.price}}元</view>
           <view class="detail">
-            <view>淘宝</view>
-            <view>| 8-30</view>
+            <view class="item">{{item.platform}}</view>
+            <view class="item">|</view>
+            <view class="item">8-30</view>
           </view>
         </view>
       </view>

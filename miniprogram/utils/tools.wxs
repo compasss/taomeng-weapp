@@ -1,0 +1,7 @@
+var platformMap = {
+  'taobao': '淘宝',
+  'jd': '京东'
+}
+module.exports = {
+  'platformMap': platformMap
+};
