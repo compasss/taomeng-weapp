@@ -1,7 +1,11 @@
 <!--miniprogram/pages/goodsDetail/goodsDetail.wxml-->
 <view class="container">
   <view class="title">{{data.title}}</view>
-  <view class="price">￥{{data.price}}</view>
+  <view class="price-a">
+    <view class="price">￥{{data.price}}</view>
+    <view class="b">原价:</view>
+    <view class="b c">￥{{data.origin_price}}</view>
+  </view>
   <!-- <view class="kouling" wx:if="{{data.platform=='taobao'}}">
     <view class="a">平台：淘宝</view>
     <view class="a">口令：gejigjeijgei</view>

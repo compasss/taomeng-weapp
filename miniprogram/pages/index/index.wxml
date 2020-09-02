@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <view class="search-head">
-    <icon type="search" size="28" class="search-icon"></icon>
-    <input class="search-nav"></input>
+    <icon type="search" size="28" class="search-icon" bindtap="handleSearch"></icon>
+    <input class="search-nav" bindconfirm="handleSearch" bindinput="handleInput"></input>
     <!-- <navigator class="search-nav" url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">搜索</navigator> -->
   </view>
 
@@ -20,7 +20,7 @@
           <view class="detail">
             <view class="item">{{item.platform}}</view>
             <view class="item">|</view>
-            <view class="item">8-30</view>
+            <view class="item">{{item.create_time}}</view>
           </view>
         </view>
       </view>

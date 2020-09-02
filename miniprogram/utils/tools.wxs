@@ -2,6 +2,28 @@ var platformMap = {
   'taobao': '淘宝',
   'jd': '京东'
 }
+
+var format = function(str) {
+  console.log(str)
+  var date = getDate(str ? str.toString().replace(getRegExp("-","g"),"/") : '')
+  console.log(date)
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+
+  month = month > 9 ? month : '0' + month
+  day = day > 9 ? day : '0' + day
+
+  var str = year + '-' + month + '-' + day
+  console.log(str)
+  return str
+}
+
+var prettyDate = function(val) {
+  return format(val)
+}
+
 module.exports = {
-  'platformMap': platformMap
+  'platformMap': platformMap,
+  'prettyDate': prettyDate
 };

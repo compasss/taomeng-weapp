@@ -8,14 +8,26 @@
   line-height: 50rpx;
   font-weight: 700;
 }
-.price{
+.price-a{
   width: 100%;
+  display: flex;
+  align-items: center;
   margin-top: 15rpx;
+}
+.price{
   font-size: 34rpx;
   color: #e62828;
   line-height: 50rpx;
   font-weight: 700;
   white-space: nowrap;
+  margin-right: 30rpx;
+}
+.price-a .b{
+  font-size: 28rpx;
+  color: #666;
+}
+.price-a .c{
+  text-decoration: line-through;
 }
 .kouling{
   width: 100%;
