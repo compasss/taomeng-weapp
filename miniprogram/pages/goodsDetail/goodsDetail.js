@@ -31,6 +31,7 @@ Page({
   },
   newOrder() {
     // 京东直接跳小程序，淘宝要复制口令
+    const self = this;
     if (this.data.data.platform === '淘宝') {
       wx.showModal({
         title: '提示',
@@ -39,7 +40,7 @@ Page({
         success (res) {
           if (res.confirm) {
             wx.setClipboardData({
-              data: 'data',
+              data: self.data.data.entry,
               success (res) {
                 wx.showToast({
                   title: '复制成功',
@@ -54,12 +55,12 @@ Page({
         }
       })
     } else {
-      this.jumpMiniProgram(this.data.data.promo_url)
+      this.jumpMiniProgram(this.data.data.entry)
     }
   },
   jumpMiniProgram(url) {
     // 跳转京东小程序
-    let path= "/pages/union/proxy/proxy?spreadUrl=" + encodeURIComponent('url')
+    let path= "/pages/union/proxy/proxy?spreadUrl=" + encodeURIComponent(url)
     wx.navigateToMiniProgram({
         appId: 'wx91d27dbf599dff74',
         path: path,

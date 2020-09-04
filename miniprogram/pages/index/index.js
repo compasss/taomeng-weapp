@@ -39,7 +39,7 @@ Page({
         resolve(res)
       }).catch(e => {
         reject(e)
-      }).finally(e => {
+      }).then(e => {
         wx.hideLoading()
       })
     })
