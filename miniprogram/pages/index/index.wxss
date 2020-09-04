@@ -76,3 +76,9 @@ page{
 .goods-item .detail .item{
   margin-right: 20rpx;
 }
+.empty-data{
+  font-size: 32rpx;
+  text-align: center;
+  padding-top: 50rpx;
+  color: #999;
+}

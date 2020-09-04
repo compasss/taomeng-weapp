@@ -14,6 +14,7 @@ Page({
     })
   },
   getDataList(more) {
+    wx.showLoading()
     return new Promise((resolve, reject) => {
       wx.cloud.callFunction({
         name: 'goods',
@@ -38,6 +39,8 @@ Page({
         resolve(res)
       }).catch(e => {
         reject(e)
+      }).finally(e => {
+        wx.hideLoading()
       })
     })
   },

@@ -12,18 +12,21 @@
       enable-back-to-top="true"
       bindscrolltolower="nextPage"
     >
-      <view class="goods-item" wx:for="{{dataList}}" wx:key="_id" bindtap="showDetail" data-id="{{item._id}}" data-index="{{index}}">
-        <image src="{{item.main_pic}}" class="img"></image>
-        <view class="content">
-          <view class="title">{{item.title}}</view>
-          <view class="price">{{item.price}}元</view>
-          <view class="detail">
-            <view class="item">{{item.platform}}</view>
-            <view class="item">|</view>
-            <view class="item">{{item.create_time}}</view>
+      <view wx:if="{{dataList.length>0}}">
+        <view class="goods-item" wx:for="{{dataList}}" wx:key="_id" bindtap="showDetail" data-id="{{item._id}}" data-index="{{index}}">
+          <image src="{{item.main_pic}}" class="img"></image>
+          <view class="content">
+            <view class="title">{{item.title}}</view>
+            <view class="price">{{item.price}}元</view>
+            <view class="detail">
+              <view class="item">{{item.platform}}</view>
+              <view class="item">|</view>
+              <view class="item">{{item.create_time}}</view>
+            </view>
           </view>
         </view>
       </view>
+      <view wx:else class="empty-data">暂无数据</view>
     </scroll-view>
   </view>
 </view>
