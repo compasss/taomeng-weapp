@@ -24,8 +24,8 @@ exports.main = async (event, context) => {
 
     if (event.query) {
       dbMatch.title = new db.RegExp({
-        regexp: '.*',
-        options: 'g'
+        regexp: event.query,
+        options: 'gi'
       })
     }
 
